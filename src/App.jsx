@@ -1,16 +1,21 @@
-import Player from './components/Player';
+import './index.css';
+
+import Avatar from './component/Avatar';
+import Intro from './component/Intro';
+import SkillList from './component/SkilList';
+
 function App() {
   return (
-    <main>
-      <div id="game-container">
-        <ol id="players">
-          <Player initialName="Player 1" symbol="X" />
-          <Player initialName="Player 2" symbol="O" />
-        </ol>
-        GAME BOARD
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        {/* Should contain one Skill component
+        for each web dev skill that you have,
+        customized with props */}
+        <SkillList />
       </div>
-      LOG
-    </main>
+    </div>
   );
 }
 
