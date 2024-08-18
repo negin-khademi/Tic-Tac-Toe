@@ -1,8 +1,11 @@
-export default function Skill(props) {
+export default function Skill({ color, skill, level }) {
   return (
-    <div>
-      <span className="skill" style={{ backgroundColor: props.color }}>
-        {props.skill} {props.emoji}
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+      <span>
+        {level === 'beginner' && '👶'}
+        {level === 'intermediate' && '👍'}
+        {level === 'advanced' && '💪'}
       </span>
     </div>
   );
